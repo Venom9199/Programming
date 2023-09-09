@@ -11,18 +11,18 @@ char deprt[9];
 char from[9];
 char to[9];
 char arriva[9];
-int  T4tutorials_Total_Seats, T4tutorials_Total_Fare;
-int BusNo, T4tutorials_Departure_Timing, s;
+int  s_Total_Seats, s_Total_Fare;
+int BusNo, s_Departure_Timing, s;
 public:
-	void T4tutorials_Bus_Registration();
+	void s_Bus_Registration();
 	void show();
 	void book();
-	void T4tutorialsExit();
+	void sExit();
  
  
 }b[8];
  
-void bus::T4tutorials_Bus_Registration(void)
+void bus::s_Bus_Registration(void)
 {
 	cout.setf(ios::right,ios::adjustfield);
 	cout.width(15);
@@ -39,7 +39,7 @@ cin>>to;
 	cout.setf(ios::right,ios::adjustfield);
 	cout.width(15);
 cout<<"\nDeparture: ";
-cin>>T4tutorials_Departure_Timing;
+cin>>s_Departure_Timing;
 	cout.setf(ios::right,ios::adjustfield);
 	cout.width(15);
 cout<<"\nTotal seats: ";
@@ -72,11 +72,11 @@ void bus::show(void)
 			cout.setf(ios::right,ios::adjustfield);
 			cout.width(15);
 			cout<<"Departure: ";
-			cout<<b[i].T4tutorials_Departure_Timing<<" O'clock"<<endl;
+			cout<<b[i].s_Departure_Timing<<" O'clock"<<endl;
 			cout.setf(ios::right,ios::adjustfield);
 			cout.width(15);
 			cout<<"Seats: ";
-			cout<<b[i].T4tutorials_Total_Seats<<endl<<endl<<endl;
+			cout<<b[i].s_Total_Seats<<endl<<endl<<endl;
  
 		}
 		system("PAUSE");
@@ -87,7 +87,7 @@ void bus::show(void)
 void bus::book(void)
 {
 int number;
-float T4tutorials_Total_Fare;
+float s_Total_Fare;
 	cout<<"\nEnter Bus No: ";
 	cin>>number;
 	int n;
@@ -95,20 +95,20 @@ float T4tutorials_Total_Fare;
  {
 	 if(b[n].BusNo==number)
 	 {
-		if(b[n].T4tutorials_Total_Seats<=0)
+		if(b[n].s_Total_Seats<=0)
 		{
 		cout<<"\tSORRY!"<<endl<<"\tNo  Seat Available\t";
 		}
 		else
 		{
-		 cout<<endl<<"Total seat available: "<<b[n].T4tutorials_Total_Seats;
+		 cout<<endl<<"Total seat available: "<<b[n].s_Total_Seats;
 		 cout<<endl<<"Enter Passenger's Name: ";
 		 cin>>PessengerName;
 		 cout<<endl<<"Number of seats: ";
 		 cin>>s;
-		 while((b[n].T4tutorials_Total_Seats=b[n].T4tutorials_Total_Seats-s)<0)
+		 while((b[n].s_Total_Seats=b[n].s_Total_Seats-s)<0)
 			 {cout<<endl<<"Limit Exceed...Please re-enter ";
-			 b[n].T4tutorials_Total_Seats=b[n].T4tutorials_Total_Seats+s;
+			 b[n].s_Total_Seats=b[n].s_Total_Seats+s;
 				cin>>s;
  
  
@@ -127,14 +127,14 @@ cout<<b[n].from<<" to "<<b[n].to<<endl;
 cout.setf(ios::right,ios::adjustfield);
 	cout.width(30);
 cout<<"Departure: ";
-cout<<b[n].T4tutorials_Departure_Timing<<" O'clock"<<endl;
+cout<<b[n].s_Departure_Timing<<" O'clock"<<endl;
 cout.setf(ios::right,ios::adjustfield);
 	cout.width(30);
 cout<<"Total seat: ";
 cout<<s<<endl;
-T4tutorials_Total_Fare=30*s;
-T4tutorials_Total_Fare=T4tutorials_Total_Fare+(T4tutorials_Total_Fare*.12);
-TotalSale=TotalSale+T4tutorials_Total_Fare;
+s_Total_Fare=30*s;
+s_Total_Fare=s_Total_Fare+(s_Total_Fare*.12);
+TotalSale=TotalSale+s_Total_Fare;
 cout.setf(ios::right,ios::adjustfield);
 	cout.width(30);
 cout<<"Total T4tutorials_Total_Fare(with 12%vat): ";
@@ -143,7 +143,7 @@ cout.setf(ios::showpoint);
 cout.precision(3);
 cout.setf(ios::fixed,ios::floatfield);
 cout.width(8);
-cout<<T4tutorials_Total_Fare<<endl;
+cout<<s_Total_Fare<<endl;
  
 cout.setf(ios::right,ios::adjustfield);
 	cout.width(30);
@@ -165,12 +165,12 @@ int main()
  cout<<"\t\t\t\tBus Ticketing System\n";
  cout<<"*************** "<<endl;
  
- cout<<" T4tutorials_Bus_Registration\n\t\t\t 2 :: List Available Bus\n\t\t\t 3 => Book Tickets\n\t\t\t 4 => T4tutorialsExit";
+ cout<<" s_Bus_Registration\n\t\t\t 2 :: List Available Bus\n\t\t\t 3 => Book Tickets\n\t\t\t 4 => sExit";
  cout<<"\n\n\t\t Enter your choice: ";
  cin>>w;
  switch(w){
  case 1:
-	b[p].T4tutorials_Bus_Registration();
+	b[p].s_Bus_Registration();
  
  break;
  case 2:
