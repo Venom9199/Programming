@@ -4,8 +4,7 @@ using namespace std;
  
 int r=0,p=0,k=20;
 float TotalSale=0;
- 
-class bus{
+ class bus{
 char PessengerName[99];
 char deprt[9];
 char from[9];
